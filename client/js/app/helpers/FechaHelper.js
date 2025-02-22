@@ -7,7 +7,7 @@ class FechaHelper {
     static textoParaFecha(texto) {
 
         if (!/^\d{4}-\d{2}-\d{2}$/.test(texto))
-            throw new Error('No mame puto');
+            throw new Error('Error en la fecha');
         else
             return new Date(...texto.split('-')
                 .map((item, index) => (index == 1) ? item - 1 : item));
